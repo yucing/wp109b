@@ -5,20 +5,32 @@
                 background-color: #79797959;
             }
 
-            table {
+            table.four {
                 font-family: arial, sans-serif;
                 border-collapse: collapse;
                 width: 100%;
             }
 
             td{
+                width: 20%;
                 background-color: #ffffff;
                 border: 1px solid #dddddd;
                 text-align: left;
                 padding: 8px;
+                font-size: 20px;
+            }
+
+            td.none{
+                width: 20%;
+                background-color: #ffffff;
+                border-width: 1px 0px;
+                text-align: left;
+                padding: 8px;
+                font-size: 20px;
             }
 
             th {
+                width: 10%;
                 color: #ffffff;
                 background-color: #000000;
                 font-size: 20px;
@@ -26,11 +38,21 @@
                 text-align: left;
                 padding: 8px;
             }
+
+            th.none {
+                width: 10%;
+                color: #ffffff;
+                background-color: #ffffff;
+                font-size: 20px;
+                border-width: 1px 0px;
+                text-align: left;
+                padding: 8px;
+            }
         </style>
     </head>
     <body>
         <h1 style="text-align: center;">個人簡介</h1>
-        <table>
+        <table class="four">
             <tr>
                 <th>姓名</th>
                 <td>蘇郁晴</td>
@@ -43,6 +65,35 @@
                 <th>生日</th>
                 <td>90.10.18</td>
             </tr>
-        </table>
+            <tr>
+                <th>出身地</th>
+                <td>高雄</td>
+                <th>手機</th>
+                <td>不會接</td>
+            </tr>
+            <tr>
+                <th>就讀國小</th>
+                <td>莊敬國小</td>
+                <th>就讀國中</th>
+                <td>鼎金國中</td>
+            </tr>
+            <tr>
+                <th>就讀高中</th>
+                <td>新莊高中</td>
+                <th>就讀大學</th>
+                <td>金門大學</td>
+            </tr>
+            <tr>
+                <th>興趣</th>
+                <td class="none">睡覺、                                                                                                                     吃東西</td>
+                <th class="none"></th>
+                <td class="none"></td>
+            </tr>
+            <tr>
+                <th>家庭成員</th>
+                <td class="none">爸爸、媽媽、姐姐、妹妹、小狗</td>
+                <th class="none"></th>
+                <td class="none"></td>
+            </tr>
     </body>
 </html>
