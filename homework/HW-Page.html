@@ -1,0 +1,51 @@
+<html>
+    <head>
+        <style>
+            ul{
+                list-style-type: none;
+                background-color: rgba(0, 0, 0, 0.6);
+                overflow: hidden;
+                margin: 0px;
+                padding: 0px;
+            }
+            li a{
+                font-size: 20px;
+                color: white;
+                text-align: center;
+                padding: 20px 50px;
+                display: block;
+                text-decoration: none;
+            }
+            li a:hover:not(.page){
+                background-color: rgba(0, 0, 0, 1);
+            }
+            li{
+                float: left;
+                border-right: 1px solid white;
+            }
+            h1{
+                margin: 100px;
+                text-align: center;
+                font-size: 150px;
+                text-shadow: 10px 10px 10px #a09595;
+            }
+            .page{
+                background: rgba(0, 0, 0, 1);
+            }
+        </style>
+    </head>
+    <body>
+        <ul>
+            <li>
+                <a>個人資料</a>
+            </li>
+            <li>
+                <a>學習歷程</a>
+            </li>
+            <li style="float: right;"><a class="page">首頁</a></li>
+        </ul>
+        <div>
+            <h1>Welcome to my website!</h1>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,105 @@
+<html>
+    <head>
+        <style>
+            ul{
+                list-style-type: none;
+                background-color: rgba(0, 0, 0, 0.6);
+                overflow: hidden;
+                margin: 0px;
+                padding: 0px;
+            }
+            li a{
+                font-size: 20px;
+                color: white;
+                text-align: center;
+                padding: 20px 50px;
+                display: block;
+                text-decoration: none;
+            }
+            li a:hover:not(.page){
+                background-color: rgba(0, 0, 0, 1);
+            }
+            li{
+                float: left;
+                border-right: 1px solid white;
+            }
+            .page{
+                background: rgba(0, 0, 0, 1);
+            }
+            div.h{
+                font-size: 25px;
+                color: white;
+                text-align: center;
+                float: left;
+                width: 100px;
+                height: 100px;
+                background-color: black;
+                margin-top: 100px;
+                position: relative;
+                transition: width 1.5s ,height 1.5s,transform 1.5s;
+                margin: 20px;
+            }
+            div.h:hover{
+                width: 250px;
+                height: 250px;
+                transform: rotate(360deg);
+            }
+            p.content{
+                display: none;
+                margin-top: 115px;
+            }
+            div:hover p.content{
+                display: block;
+            }
+            p.hide{
+                display: block;
+            }
+            div:hover p.hide{
+                display: none;
+            }
+        </style>
+    </head>
+    <body>
+        <ul>
+            <li>
+                <a>個人資料</a>
+            </li>
+            <li>
+                <a>學習歷程</a>
+            </li>
+            <li style="float: right;"><a class="page">首頁</a></li>
+        </ul>
+        <div class="h">
+            <P class="hide">姓名</P>
+            <P class="content">蘇郁晴</P>
+        </div>
+        <div class="h">
+            <P class="hide">性別</P>
+            <P class="content">女</P>
+        </div>
+        <div class="h">
+            <P class="hide">血型</P>
+            <P class="content">B型</P>
+        </div>
+        <div class="h">
+            <P class="hide">生日</P>
+            <P class="content">90.10.18</P>
+        </div>
+        <div class="h">
+            <P class="hide">來自</P>
+            <P class="content">高雄</P>
+        </div>
+        <div class="h">
+            <P class="hide">手機</P>
+            <P class="content">不會接</P>
+        </div>
+        <div class="h">
+            <P class="hide">興趣</P>
+            <P class="content">玩遊戲</P>
+        </div>
+        <div class="h">
+            <P class="hide">家裡人數</P>
+            <P class="content">5個人+1隻狗</P>
+        </div>
+    </body>
+</html>
