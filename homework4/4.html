@@ -42,9 +42,7 @@
     </head>
     <body>
         <h style="font-size: 50px ; margin-left: 35%; color: white;">Welcome my game!!!</h>
-        <p><button onclick="H()">Click Me</button></p> 
-        <p><button onclick="Move()">Click Me</button></p> 
-        <p><button onclick="Down()">Click Me</button></p>
+        <p><button id="start">Click Me</button></p> 
 
         <div class="out1">
             <div class="in">
@@ -55,45 +53,13 @@
         </div>
 
         <script>
+            var s = document.getElementById("start");
             var elem = document.getElementsByClassName("animate");
-            var x;
+            var x = 0;
+            var po = 50;
             function H(){
-                po = 50;
                 for(var i=0;i<elem.length;i++)
                 elem[i].style.top=po;
-            }
-            function Move(){
-                x = 0;/*Math.floor(Math.random()*2)*/
-                var po = 50;
-                var id1 = null;
-                var id2 = null;
-                clearInterval(id1)
-                clearInterval(id2)
-                id1 = setInterval(frames,1);
-                function frames(){
-                    if(po==0)
-                    clearInterval(id1);
-                    else{
-                        po--;
-                        elem[x].style.top=po;
-                    }
-                }
-            }
-            function Down(){
-                var po = 0;
-                var id1 = null;
-                var id2 = null;
-                clearInterval(id1)
-                clearInterval(id2)
-                id1 = setInterval(frames,1);
-                function frames(){
-                    if(po==50)
-                    clearInterval(id1);
-                    else{
-                        po++;
-                        elem[x].style.top=po;
-                    }
-                }
             }
         </script>
 

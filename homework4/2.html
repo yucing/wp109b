@@ -53,23 +53,25 @@
                 </div>
             </div>
         </div>
+        <div class="out1">
+            <div class="in">
+                <div class="i">
+                    <img src="5.png" class="animate" onmousedown="Down()" >
+                </div>
+            </div>
+        </div>
 
         <script>
             var elem = document.getElementsByClassName("animate");
-            var x;
+            var x = 0;
+            var po = 60;
             function H(){
-                po = 50;
                 for(var i=0;i<elem.length;i++)
                 elem[i].style.top=po;
             }
             function Move(){
-                x = 0;/*Math.floor(Math.random()*2)*/
-                var po = 50;
-                var id1 = null;
-                var id2 = null;
-                clearInterval(id1)
-                clearInterval(id2)
-                id1 = setInterval(frames,1);
+                /*x = Math.floor(Math.random()*2)*/
+                var id1 = setInterval(frames,1);
                 function frames(){
                     if(po==0)
                     clearInterval(id1);
@@ -77,15 +79,11 @@
                         po--;
                         elem[x].style.top=po;
                     }
+                var id2 =setTimeout(Down, 2000)
                 }
             }
             function Down(){
-                var po = 0;
-                var id1 = null;
-                var id2 = null;
-                clearInterval(id1)
-                clearInterval(id2)
-                id1 = setInterval(frames,1);
+                var id1 = setInterval(frames,1);
                 function frames(){
                     if(po==50)
                     clearInterval(id1);

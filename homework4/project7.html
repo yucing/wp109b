@@ -1,0 +1,307 @@
+<html>
+    <head>
+        <style>
+            body{
+                background-color:rgb(50, 202, 83);
+            }
+            h{
+                font-size: 50px ;
+                color: white;
+                padding-left: 0px;
+                padding-right: 50px;
+                padding-top: 50px;
+                padding-bottom: 50px;
+            }
+            button{
+                display: inline;
+                padding-top: 0px;
+            }
+            p{
+                display: none;
+                color: white;
+                font-size: 25px;
+                padding: 50px;
+            }
+            div.box{
+                clear: both;
+                display: table;
+            }
+            div.out1{
+                float: left;
+                width: 150px;
+                height: 150px;
+                position: relative;
+                background-color: rgb(146, 105, 24);
+                border-radius: 50%;
+                margin-left: 100px;
+                margin-top: 30px;
+            }
+            div.in{
+                width: 142.5px;
+                height: 135px;
+                position: absolute;
+                background-color: rgb(119, 85, 16);
+                border-radius: 50%;
+                margin-top: 15px;
+                margin-left:3.75px;
+            }
+            div.i{
+                width: 135px;
+                height: 120px;
+                position: absolute;
+                background-color: rgb(97, 66, 9);
+                border-radius: 50%;
+                margin-top: 15px;
+                margin-left: 3.75px;
+                overflow: hidden;
+            }
+            img{
+                position: absolute;
+                width: 120px;
+                height: 225px;
+                margin-left: 8px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="t">
+            <h>Welcome to my game!!!</h>
+            <button style="width: 120px ;height: 50px;font-size: 30px;" id="start">START</button>
+            <button style="width: 120px ;height: 50px;font-size: 30px;display: none;" id="next" onclick="document.location='project7.html'">NEXT</button>
+            <p id="p">分數:0</p>
+            <p id="count" style="font-size: 50px;"></p>
+        </div>
+        <hr>     
+
+        <div.box>
+            <div class="out1">
+                <div class="in">
+                    <div class="i">
+                        <img src="5.png" class="animate" onmousedown="DD()" >
+                    </div>
+                </div>
+            </div>
+            <div class="out1">
+                <div class="in">
+                    <div class="i">
+                        <img src="5.png" class="animate" onmousedown="DD()" >
+                    </div>
+                </div>
+            </div>
+            <div class="out1">
+                <div class="in">
+                    <div class="i">
+                        <img src="5.png" class="animate" onmousedown="DD()" >
+                    </div>
+                </div>
+            </div>
+            <div class="out1">
+                <div class="in">
+                    <div class="i">
+                        <img src="5.png" class="animate" onmousedown="DD()" >
+                    </div>
+                </div>
+            </div>
+            <div class="out1">
+                <div class="in">
+                    <div class="i">
+                        <img src="5.png" class="animate" onmousedown="DD()" >
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div.box>
+            <div class="out1">
+                <div class="in">
+                    <div class="i">
+                        <img src="5.png" class="animate" onmousedown="DD()" >
+                    </div>
+                </div>
+            </div>
+            <div class="out1">
+                <div class="in">
+                    <div class="i">
+                        <img src="5.png" class="animate" onmousedown="DD()" >
+                    </div>
+                </div>
+            </div>
+            <div class="out1">
+                <div class="in">
+                    <div class="i">
+                        <img src="5.png" class="animate" onmousedown="DD()" >
+                    </div>
+                </div>
+            </div>
+            <div class="out1">
+                <div class="in">
+                    <div class="i">
+                        <img src="5.png" class="animate" onmousedown="DD()" >
+                    </div>
+                </div>
+            </div>
+            <div class="out1">
+                <div class="in">
+                    <div class="i">
+                        <img src="5.png" class="animate" onmousedown="DD()" >
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div.box>
+            <div class="out1">
+                <div class="in">
+                    <div class="i">
+                        <img src="5.png" class="animate" onmousedown="DD()" >
+                    </div>
+                </div>
+            </div>
+            <div class="out1">
+                <div class="in">
+                    <div class="i">
+                        <img src="5.png" class="animate" onmousedown="DD()" >
+                    </div>
+                </div>
+            </div>
+            <div class="out1">
+                <div class="in">
+                    <div class="i">
+                        <img src="5.png" class="animate" onmousedown="DD()" >
+                    </div>
+                </div>
+            </div>
+            <div class="out1">
+                <div class="in">
+                    <div class="i">
+                        <img src="5.png" class="animate" onmousedown="DD()" >
+                    </div>
+                </div>
+            </div>
+            <div class="out1">
+                <div class="in">
+                    <div class="i">
+                        <img src="5.png" class="animate" onmousedown="DD()" >
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            var s =document.getElementById("start");
+            s.addEventListener("mouseup",D);
+            s.addEventListener("mouseup",delay);
+            s.addEventListener("mouseup",dis);
+            var elem=document.getElementsByClassName("animate");
+            var x;
+            var id1 = null;
+            var id2 = null;
+            var v = null;
+            var select = 0;
+            var num = 0;
+            var y = 30;
+            var spe = 500;
+
+            function dis(){
+                document.getElementById("start").style.display="none";
+                document.getElementById("p").style.display="inline";
+                document.getElementById("count").style.display="inline";
+            }
+            function D(){
+                var po = 110;
+                for(var i=0;i<elem.length;i++)
+                elem[i].style.top=po;
+            }
+            function delay(){
+                var a = null;
+                clearInterval(a);
+                a = setTimeout(delay2,100);
+            }
+            function delay2(){
+                clearInterval(v);
+                v = setInterval(keep,600);
+                count();
+            }
+            function keep(){
+                var a =null;
+                var b =null;
+                clearTimeout(a);
+                clearTimeout(a);
+                a = setTimeout(Up,0);
+                b = setTimeout(Down,spe);
+            }
+            function Up(){
+                var po = 110;
+                select = 0;
+                x = Math.floor(Math.random()*15);
+                clearInterval(id1);
+                id1=setInterval(frames,1);
+                function frames(){
+                    if(po==0 || select == 1)
+                    clearInterval(id1);
+                    else{
+                        po=po-5;
+                        elem[x].style.top=po;
+                    }
+                }
+            }
+            function Down(){
+                if(select ==0)
+                {
+                    var po = 0;
+                    clearInterval(id2);
+                    id2=setInterval(frames,1);
+                    function frames(){
+                        if(po==110)
+                        clearInterval(id2);
+                        else{
+                            po=po+5;
+                            elem[x].style.top=po;
+                        }
+                    }
+                }
+            }
+            function DD(){
+                num++;
+                select = 1;
+                var po = 0;
+                print();
+                clearInterval(id2);
+                id2=setInterval(frames,1);
+                function frames(){
+                    if(po==110)
+                    clearInterval(id2);
+                    else{
+                        po=po+5;
+                        elem[x].style.top=po;
+                    }
+                }
+            }
+            function count(){
+                if(y===20)
+                spe=400;
+                else if(y===10)
+                spe=300;
+                document.getElementById("count").innerHTML=y;
+                if(y===0)
+                {
+                    var b = "time Up!!!\nyour score is " + num;
+                    clearInterval(v);
+                    alert(b);
+                    document.getElementById("next").style.display="inline";
+                    document.getElementById("p").style.display="none";
+                    document.getElementById("count").style.display="none";
+                }
+                else
+                {
+                    setTimeout(count,1000)
+                    y=y-1;
+                }
+            }
+            function print(){
+                document.getElementById("p").innerHTML="分數:"+num;
+            }
+        </script>
+
+    </body>
+</html>

@@ -5,8 +5,8 @@
                 background-color:rgb(50, 202, 83);
             }
             div.out1{
-                width: 100px;
-                height: 100px;
+                width: 200px;
+                height: 200px;
                 position: relative;
                 background-color: rgb(146, 105, 24);
                 border-radius: 50%;
@@ -14,38 +14,43 @@
                 margin-top: 50px;
             }
             div.in{
-                width: 95px;
-                height: 90px;
+                width: 190px;
+                height: 180px;
                 position: absolute;
                 background-color: rgb(119, 85, 16);
                 border-radius: 50%;
-                margin-top: 10px;
-                margin-left: 2.5px;
+                margin-top: 20px;
+                margin-left: 5px;
             }
             div.i{
-                width: 90px;
-                height: 80px;
+                width: 180px;
+                height: 160px;
                 position: absolute;
                 background-color: rgb(97, 66, 9);
                 border-radius: 50%;
-                margin-top: 10px;
-                margin-left: 2.5px;
+                margin-top: 20px;
+                margin-left: 5px;
                 overflow: hidden;
             }
             img{
                 position: absolute;
-                width: 80px;
-                height: 150px;
-                margin-left: 5px;
+                width: 160px;
+                height: 300px;
+                margin-left: 10px;
             }
         </style>
     </head>
     <body>
         <h style="font-size: 50px ; margin-left: 35%; color: white;">Welcome my game!!!</h>
-        <p><button onclick="H()">Click Me</button></p> 
-        <p><button onclick="Move()">Click Me</button></p> 
-        <p><button onclick="Down()">Click Me</button></p>
+        <p><button onclick="H()">Click Me</button><button onclick="Move()">Click Me</button></p> 
 
+        <div class="out1">
+            <div class="in">
+                <div class="i">
+                    <img src="5.png" class="animate" onmousedown="Down()" >
+                </div>
+            </div>
+        </div>
         <div class="out1">
             <div class="in">
                 <div class="i">

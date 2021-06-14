@@ -1,0 +1,24 @@
+<html>
+    <body style="background-color: black;">
+        <p><button onclick="myMove()">Click Me</button></p> 
+        <img src="3.png" id="animate" style="position: absolute;">
+        <script>
+            function myMove() {
+              var id = null;
+              var elem = document.getElementById("animate");   
+              var pos = 300;
+              elem.style.top = pos;
+              clearInterval(id);
+              id = setInterval(frame, 1);
+              function frame() {
+                if (pos == 100) {
+                  clearInterval(id);
+                } else {
+                  pos--; 
+                  elem.style.top = pos + "px"; 
+                }
+              }
+            }
+            </script>
+    </body>
+</html>
