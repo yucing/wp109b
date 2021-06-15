@@ -212,6 +212,7 @@ function Down(){
     }
 }
 function DD(){
+    elem[x].src="6.png";
     num++;
     select = 1;
     var po = 0;
@@ -220,7 +221,10 @@ function DD(){
     id2=setInterval(frames,1);
     function frames(){
         if(po==150)
+        {
+            elem[x].src="5.png";
             clearInterval(id2);
+        }
         else{
             po=po+5;
             elem[x].style.top=po;

@@ -28,38 +28,38 @@
             }
             div.out1{
                 float: left;
-                width: 150px;
-                height: 150px;
+                width: 200px;
+                height: 200px;
                 position: relative;
                 background-color: rgb(146, 105, 24);
                 border-radius: 50%;
                 margin-left: 100px;
-                margin-top: 30px;
+                margin-top: 50px;
             }
             div.in{
-                width: 142.5px;
-                height: 135px;
+                width: 190px;
+                height: 180px;
                 position: absolute;
                 background-color: rgb(119, 85, 16);
                 border-radius: 50%;
-                margin-top: 15px;
-                margin-left:3.75px;
+                margin-top: 20px;
+                margin-left: 5px;
             }
             div.i{
-                width: 135px;
-                height: 120px;
+                width: 180px;
+                height: 160px;
                 position: absolute;
                 background-color: rgb(97, 66, 9);
                 border-radius: 50%;
-                margin-top: 15px;
-                margin-left: 3.75px;
+                margin-top: 20px;
+                margin-left: 5px;
                 overflow: hidden;
             }
             img{
                 position: absolute;
-                width: 120px;
-                height: 225px;
-                margin-left: 8px;
+                width: 160px;
+                height: 300px;
+                margin-left: 10px;
             }
         </style>
     </head>
@@ -67,7 +67,7 @@
         <div class="t">
             <h>Welcome to my game!!!</h>
             <button style="width: 120px ;height: 50px;font-size: 30px;" id="start">START</button>
-            <button style="width: 120px ;height: 50px;font-size: 30px;display: none;" id="next" onclick="document.location='Wpj3.html'">NEXT</button>
+            <button style="width: 120px ;height: 50px;font-size: 30px;display: none;" id="next" onclick="document.location='Wpj2.html'">NEXT</button>
             <p id="p">分數:0</p>
             <p id="count" style="font-size: 50px;"></p>
         </div>
@@ -102,61 +102,9 @@
                     </div>
                 </div>
             </div>
-            <div class="out1">
-                <div class="in">
-                    <div class="i">
-                        <img src="5.png" class="animate" onmousedown="DD()" >
-                    </div>
-                </div>
-            </div>
         </div>
 
         <div.box>
-            <div class="out1">
-                <div class="in">
-                    <div class="i">
-                        <img src="5.png" class="animate" onmousedown="DD()" >
-                    </div>
-                </div>
-            </div>
-            <div class="out1">
-                <div class="in">
-                    <div class="i">
-                        <img src="5.png" class="animate" onmousedown="DD()" >
-                    </div>
-                </div>
-            </div>
-            <div class="out1">
-                <div class="in">
-                    <div class="i">
-                        <img src="5.png" class="animate" onmousedown="DD()" >
-                    </div>
-                </div>
-            </div>
-            <div class="out1">
-                <div class="in">
-                    <div class="i">
-                        <img src="5.png" class="animate" onmousedown="DD()" >
-                    </div>
-                </div>
-            </div>
-            <div class="out1">
-                <div class="in">
-                    <div class="i">
-                        <img src="5.png" class="animate" onmousedown="DD()" >
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div.box>
-            <div class="out1">
-                <div class="in">
-                    <div class="i">
-                        <img src="5.png" class="animate" onmousedown="DD()" >
-                    </div>
-                </div>
-            </div>
             <div class="out1">
                 <div class="in">
                     <div class="i">
@@ -199,8 +147,8 @@
             var v = null;
             var select = 0;
             var num = 0;
-            var y = 30;
-            var spe = 500;
+            var y = 20;
+            var spe = 1000;
 
             function dis(){
                 document.getElementById("start").style.display="none";
@@ -208,7 +156,7 @@
                 document.getElementById("count").style.display="inline";
             }
             function D(){
-                var po = 110;
+                var po = 150;
                 for(var i=0;i<elem.length;i++)
                 elem[i].style.top=po;
             }
@@ -219,7 +167,7 @@
             }
             function delay2(){
                 clearInterval(v);
-                v = setInterval(keep,700);
+                v = setInterval(keep,1200);
                 count();
             }
             function keep(){
@@ -231,9 +179,9 @@
                 b = setTimeout(Down,spe);
             }
             function Up(){
-                var po = 110;
+                var po = 150;
                 select = 0;
-                x = Math.floor(Math.random()*15);
+                x = Math.floor(Math.random()*8);
                 clearInterval(id1);
                 id1=setInterval(frames,1);
                 function frames(){
@@ -252,7 +200,7 @@
                     clearInterval(id2);
                     id2=setInterval(frames,1);
                     function frames(){
-                        if(po==110)
+                        if(po==150)
                         clearInterval(id2);
                         else{
                             po=po+5;
@@ -262,7 +210,7 @@
                 }
             }
             function DD(){
-                elem[x].src="6.png";
+                elem[x].src = "6.png";
                 num++;
                 select = 1;
                 var po = 0;
@@ -270,7 +218,7 @@
                 clearInterval(id2);
                 id2=setInterval(frames,1);
                 function frames(){
-                    if(po==110)
+                    if(po==150)
                     {
                         elem[x].src="5.png";
                         clearInterval(id2);
@@ -282,16 +230,15 @@
                 }
             }
             function count(){
-                if(y===20)
-                spe=400;
-                else if(y===10)
-                spe=300;
+                if(y===10)
+                spe=700;
                 document.getElementById("count").innerHTML=y;
                 if(y===0)
                 {
                     var b = "Time's Up!!!\nYour score is " + num;
                     clearInterval(v);
                     alert(b);
+                    /*document.getElementById("start").style.display="inline";*/
                     document.getElementById("next").style.display="inline";
                     document.getElementById("p").style.display="none";
                     document.getElementById("count").style.display="none";
