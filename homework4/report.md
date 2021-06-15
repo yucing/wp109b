@@ -25,6 +25,7 @@
 * 利用if/else控制圖片上下移動
 * 利用clearInterval控制函式
 * 利用clearTimeout控制函式
+* 利用src改變圖片
 
 <hr/>
 
