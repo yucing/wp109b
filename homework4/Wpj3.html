@@ -325,7 +325,7 @@
                 b = setTimeout(Down,spe);
             }
             function Up(){
-                var po = 70;
+                var po = 75;
                 select = 0;
                 x = Math.floor(Math.random()*28);
                 clearInterval(id1);
@@ -346,7 +346,7 @@
                     clearInterval(id2);
                     id2=setInterval(frames,1);
                     function frames(){
-                        if(po==70)
+                        if(po==75)
                         clearInterval(id2);
                         else{
                             po=po+5;
@@ -367,7 +367,7 @@
                     id2=setInterval(frames,1);
                 }
                 function frames(){
-                    if(po==70)
+                    if(po==75)
                     {
                         elem[x].src="5.png";
                         clearInterval(id2);
