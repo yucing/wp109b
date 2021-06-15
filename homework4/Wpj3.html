@@ -294,7 +294,7 @@
             var select = 0;
             var num = 0;
             var y = 40;
-            var spe = 300;
+            var spe = 350;
 
             function dis(){
                 document.getElementById("start").style.display="none";
@@ -302,7 +302,7 @@
                 document.getElementById("count").style.display="inline";
             }
             function D(){
-                var po = 70;
+                var po = 75;
                 for(var i=0;i<elem.length;i++)
                 elem[i].style.top=po;
             }
@@ -313,7 +313,7 @@
             }
             function delay2(){
                 clearInterval(v);
-                v = setInterval(keep,450);
+                v = setInterval(keep,600);
                 count();
             }
             function keep(){
@@ -356,13 +356,16 @@
                 }
             }
             function DD(){
-                elem[x].src="6.png";
+                elem[x].src="7.png";
                 num++;
                 select = 1;
                 var po = 0;
                 print();
                 clearInterval(id2);
-                id2=setInterval(frames,1);
+                setTimeout(del,100);
+                function del(){
+                    id2=setInterval(frames,1);
+                }
                 function frames(){
                     if(po==70)
                     {
