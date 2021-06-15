@@ -219,7 +219,10 @@ function DD(){
     var po = 0;
     print();
     clearInterval(id2);
-    id2=setInterval(frames,1);
+    setTimeout(del,200);
+    function del(){
+        id2=setInterval(frames,1);
+    }
     function frames(){
         if(po==150)
         {
