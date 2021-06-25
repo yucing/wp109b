@@ -27,7 +27,7 @@
             button{
                 width: 150;
                 font-size: 20px;
-                margin:30 10 30 215;
+                margin:30 10 30 330;
                 display: inline;
             }
             ul{
@@ -78,7 +78,8 @@
                 <a class="page" href="HW-Page.html">首頁</a>
             </li>
         </ul>
-        <button onclick="my=setInterval(move,30)">START</button><button onclick="document.location='HW-game.html'">RESET</button><button onclick="clearInterval(my)" id="o">PUT</button>
+        <!--<button onclick="my=setInterval(move,30)">START</button>-->
+        <button onclick="document.location='HW-game.html'">RESET</button><button onclick="clearInterval(my)" id="o">PUT</button>
         <div class="out">
             <div class="animate"></div>
             <div class="animate" style="visibility:hidden;" ></div>
@@ -158,7 +159,7 @@
                             clearInterval(b);
                             if(speed===5)
                             speed=5;
-                            else if(speed==20)
+                            else if(speed<=20)
                             speed-=5;
                             else
                             speed-=10;
@@ -183,6 +184,7 @@
                         if(z>50){
                             alert("You miss the block!\nPlease click the RESET button!");
                             clearInterval(my);
+                            document.getElementById("o").style.visibility="hidden";
                         }
                         x=le;
                     }
