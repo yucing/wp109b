@@ -86,7 +86,6 @@
             <div class="animate" style="visibility:hidden;"></div>
             <div class="animate" style="visibility:hidden;"></div>
             <div class="animate" style="visibility:hidden;"></div>
-            <div class="animate" style="visibility:hidden;"></div>
             <div class="bottom"></div>
         </div>
         <p id="p"></p>
@@ -97,7 +96,7 @@
             var po = 0;
             var i = 0;
             var bo = 300;
-            var t = 100;
+            var t = 150;
             var le=225;
             var se = 0;
             var elem = document.getElementsByClassName("animate");
@@ -136,7 +135,7 @@
                     }
                 }
                 function del(){
-                    if(bo===0){
+                    if(bo===50){
                         i--;
                         bo+=50;
                         setTimeout(d,500);
@@ -166,7 +165,7 @@
                             speed-=10;
                             po=0;
                             bo=300;
-                            t=100;
+                            t=150;
                             i=0;
                             le=225;
                             se=0;
