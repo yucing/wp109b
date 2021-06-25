@@ -156,6 +156,11 @@
                         }
                         if(i===-1){
                             clearInterval(b);
+                            if(speed===5)
+                            speed=5;
+                            else if(speed==20)
+                            speed-=5;
+                            else
                             speed-=10;
                             po=0;
                             bo=300;
@@ -164,8 +169,6 @@
                             le=225;
                             se=0;
                             x=225;
-                            if(speed<=10)
-                            speed=5;
                             elem[i].style.top=po;
                             elem[i].style.visibility="visible";
                             my = setInterval(move,speed);
