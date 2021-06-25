@@ -1,0 +1,144 @@
+<html>
+    <head>
+        <style>
+            div.out{
+                width: 500;
+                height: 400;
+                background-color: black;
+                position: relative;
+                margin-left:30% ;
+                overflow: hidden;
+            }
+            div.animate{
+                width: 50;
+                height: 50;
+                position: absolute;
+                background-color: blanchedalmond;
+                left: 225;
+            }
+            div.bottom{
+                width: 50;
+                height: 50;
+                position: absolute;
+                background-color: blanchedalmond;
+                left: 225;
+                bottom: 0;
+            }
+            button{
+                width: 150;
+                font-size: 20px;
+                margin:20 10 20 215;
+                display: inline;
+            }
+        </style>
+    </head>
+    <body>
+        <button onclick="my=setInterval(move,30)">START</button><button onclick="document.location='test1.html'">RESET</button><button onclick="clearInterval(my)" id="o">PUT</button>
+        <div class="out">
+            <div class="animate"></div>
+            <div class="animate" style="visibility:hidden;" ></div>
+            <div class="animate" style="visibility:hidden;"></div>
+            <div class="animate" style="visibility:hidden;"></div>
+            <div class="animate" style="visibility:hidden;"></div>
+            <div class="bottom"></div>
+        </div>
+        <p id="p"></p>
+
+        <script>
+            var speed = 30;
+            var x=225;
+            var po = 0;
+            var i = 0;
+            var bo = 300;
+            var t = 150;
+            var le=225;
+            var se = 0;
+            var elem = document.getElementsByClassName("animate");
+            var s = document.getElementById("o");
+            s.addEventListener("click",c);
+
+            function move(){
+                if(se===0)
+                le+=5;
+                else if(se===1)
+                le-=5;
+
+                if(le>=380)
+                se=1;
+                else if(le<=70)
+                se=0;
+
+                elem[i].style.left=le;
+            }
+
+            function c(){
+                po=0;
+                var a = setInterval(drop,20);
+                function drop(){
+                    if(po===bo){
+                        count();
+                        clearInterval(a);
+                        bo-=50;
+                        i++;
+                        del();
+                        elem[i].style.visibility="visible";
+                    }
+                    else{
+                        po+=10;
+                        elem[i].style.top=po;
+                    }
+                }
+                function del(){
+                    if(bo===50){
+                        i--;
+                        bo+=50;
+                        setTimeout(d,500);
+                    }
+                    else{
+                        my = setInterval(move,speed);
+                    }
+                }
+                function d(){
+                    var b = setInterval(dd,50);
+                    function dd(){
+                        bo+=10;
+                        elem[i].style.top=bo;
+                        if(bo===t){
+                            elem[i].style.visibility="hidden";
+                            elem[i].style.top=0;
+                            t+=50;
+                            i--;
+                        }
+                        if(i===-1){
+                            clearInterval(b);
+                            speed-=5;
+                            po=0;
+                            bo=300;
+                            t=150;
+                            i=0;
+                            le=225;
+                            se=0;
+                            x=225;
+                            if(speed===5)
+                            speed=5;
+                            elem[i].style.top=po;
+                            elem[i].style.visibility="visible";
+                            my = setInterval(move,speed);
+                        }
+                        }
+                    }
+                    function count(){
+                        var z = le-x;
+                        if(z<0)
+                        z=-z;
+
+                        if(z>50){
+                            alert("You miss the block!\nPlease click the RESET button!");
+                            clearInterval(my);
+                        }
+                        x=le;
+                    }
+                }
+        </script>
+    </body>
+</html>
