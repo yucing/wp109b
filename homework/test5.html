@@ -1,0 +1,437 @@
+<html>
+    <head>
+        <style>
+            ul{
+                list-style-type: none;
+                background-color: rgba(0, 0, 0, 0.6);
+                overflow: hidden;
+                margin: 0px;
+                padding: 0px;
+            }
+            li a{
+                font-size: 20px;
+                color: white;
+                text-align: center;
+                padding: 20px 50px;
+                display: block;
+                text-decoration: none;
+            }
+            li a:hover:not(.page){
+                background-color: rgba(0, 0, 0, 1);
+            }
+            li{
+                float: left;
+                border-right: 1px solid white;
+            }
+            h1{
+                margin: 100px;
+                text-align: center;
+                font-size: 150px;
+                text-shadow: 10px 10px 10px #a09595;
+            }
+            .page{
+                background: rgba(0, 0, 0, 1);
+            }
+            div{
+                padding: 20;
+                width: 10;
+                height: 10;
+                float: left;
+                font-size: 20;
+            }
+            .out{
+                background-color: white;
+                display: block;
+                border: 1px white solid;
+            }
+            .le{
+                
+                background-color: black;
+                border: 1px white solid;
+                color: white;
+                text-align: center;
+            }
+            button{
+                width: 80;
+                height: 30;
+                font-size: 20;
+                color: white;
+                border: 0px;
+            }
+            .m{
+                background: rgb(62, 121, 216);
+            }
+            .ga{
+                background: rgb(155, 17, 132);
+                margin-right: 50;
+            }
+            button.m:hover{
+                background-color: rgb(77, 200, 238);
+            }
+            button.ga:hover{
+                background-color: rgb(245, 109, 245);
+            }
+            button.m:active{
+                background-color: rgb(31, 22, 114);
+            }
+            button.ga:active{
+                background-color: rgb(54, 5, 46);
+            }
+        </style>
+    </head>
+    <body onload="easy()">
+        <ul>
+            <li>
+                <a href="HW-infor.html">個人資料</a>
+            </li>
+            <li>
+                <a href="HW-sch.html">學習歷程</a>
+            </li>
+            <li>
+                <a href="HW-game.html">小遊戲</a>
+            </li>
+            <li style="float: right;"><a class="page" href="HW-Page.html">首頁</a></li>
+        </ul>
+        <p>
+            <button onclick="document.location='test3.html'" class="ga" style="margin-left: 200;">簡單</button>
+            <button onclick="document.location='test4.html'" class="ga">普通</button>
+            <button onclick="document.location='test5.html'" class="ga">難</button>
+            <button onclick="moveu()" style="margin-left: 200;" class="m">上</button>
+            <button onclick="moved()" class="m">下</button>
+            <button onclick="movel()" class="m">左</button>
+            <button onclick="mover()" class="m">右</button>
+            <button onclick="document.location='test5.html'" class="m" style="visibility: hidden;">再一次</button>
+        </p>
+        <div class="out"></div>
+        <div class="out"></div>
+        <div class="out"></div>
+        <div class="le">H</div>
+        <div class="le"></div>
+        <div class="le"></div>
+        <div class="le"></div>
+        <div class="le"></div>
+        <div class="le"></div>
+        <div class="le"></div>
+        <div class="le"></div>
+        <div class="le"></div>
+        <div class="le"></div>
+        <div class="le"></div>
+        <div class="le"></div>
+        <div class="le"></div>
+        <div class="le"></div>
+        <div class="le"></div>
+        <div class="le"></div>
+        <div class="le"></div>
+        <div class="le"></div>
+        <div class="le"></div>
+        <div class="le"></div>
+        <div class="out"></div>
+        <div class="out"></div>
+        <div class="out"></div>
+
+        <div class="out"></div>
+        <div class="out"></div>
+        <div class="out"></div>
+        <div class="le"></div>
+        <div class="le"></div>
+        <div class="le"></div>
+        <div class="le"></div>
+        <div class="le"></div>
+        <div class="le"></div>
+        <div class="le"></div>
+        <div class="le"></div>
+        <div class="le"></div>
+        <div class="le"></div>
+        <div class="le"></div>
+        <div class="le"></div>
+        <div class="le"></div>
+        <div class="le"></div>
+        <div class="le"></div>
+        <div class="le"></div>
+        <div class="le"></div>
+        <div class="le"></div>
+        <div class="le"></div>
+        <div class="le"></div>
+        <div class="out"></div>
+        <div class="out"></div>
+        <div class="out"></div>
+
+        <div class="out"></div>
+        <div class="out"></div>
+        <div class="out"></div>
+        <div class="le"></div>
+        <div class="le"></div>
+        <div class="le"></div>
+        <div class="le"></div>
+        <div class="le"></div>
+        <div class="le"></div>
+        <div class="le"></div>
+        <div class="le"></div>
+        <div class="le"></div>
+        <div class="le"></div>
+        <div class="le"></div>
+        <div class="le"></div>
+        <div class="le"></div>
+        <div class="le"></div>
+        <div class="le"></div>
+        <div class="le"></div>
+        <div class="le"></div>
+        <div class="le"></div>
+        <div class="le"></div>
+        <div class="le"></div>
+        <div class="out"></div>
+        <div class="out"></div>
+        <div class="out"></div>
+
+        <div class="out"></div>
+        <div class="out"></div>
+        <div class="out"></div>
+        <div class="le"></div>
+        <div class="le"></div>
+        <div class="le"></div>
+        <div class="le"></div>
+        <div class="le"></div>
+        <div class="le"></div>
+        <div class="le"></div>
+        <div class="le"></div>
+        <div class="le"></div>
+        <div class="le"></div>
+        <div class="le"></div>
+        <div class="le"></div>
+        <div class="le"></div>
+        <div class="le"></div>
+        <div class="le"></div>
+        <div class="le"></div>
+        <div class="le"></div>
+        <div class="le"></div>
+        <div class="le"></div>
+        <div class="le"></div>
+        <div class="out"></div>
+        <div class="out"></div>
+        <div class="out"></div>
+
+        <div class="out"></div>
+        <div class="out"></div>
+        <div class="out"></div>
+        <div class="le"></div>
+        <div class="le"></div>
+        <div class="le"></div>
+        <div class="le"></div>
+        <div class="le"></div>
+        <div class="le"></div>
+        <div class="le"></div>
+        <div class="le"></div>
+        <div class="le"></div>
+        <div class="le"></div>
+        <div class="le"></div>
+        <div class="le"></div>
+        <div class="le"></div>
+        <div class="le"></div>
+        <div class="le"></div>
+        <div class="le"></div>
+        <div class="le"></div>
+        <div class="le"></div>
+        <div class="le"></div>
+        <div class="le"></div>
+        <div class="out"></div>
+        <div class="out"></div>
+        <div class="out"></div>
+
+        <div class="out"></div>
+        <div class="out"></div>
+        <div class="out"></div>
+        <div class="le"></div>
+        <div class="le"></div>
+        <div class="le"></div>
+        <div class="le"></div>
+        <div class="le"></div>
+        <div class="le"></div>
+        <div class="le"></div>
+        <div class="le"></div>
+        <div class="le"></div>
+        <div class="le"></div>
+        <div class="le"></div>
+        <div class="le"></div>
+        <div class="le"></div>
+        <div class="le"></div>
+        <div class="le"></div>
+        <div class="le"></div>
+        <div class="le"></div>
+        <div class="le"></div>
+        <div class="le"></div>
+        <div class="le"></div>
+        <div class="out"></div>
+        <div class="out"></div>
+        <div class="out"></div>
+
+        <div class="out"></div>
+        <div class="out"></div>
+        <div class="out"></div>
+        <div class="le"></div>
+        <div class="le"></div>
+        <div class="le"></div>
+        <div class="le"></div>
+        <div class="le"></div>
+        <div class="le"></div>
+        <div class="le"></div>
+        <div class="le"></div>
+        <div class="le"></div>
+        <div class="le"></div>
+        <div class="le"></div>
+        <div class="le"></div>
+        <div class="le"></div>
+        <div class="le"></div>
+        <div class="le"></div>
+        <div class="le"></div>
+        <div class="le"></div>
+        <div class="le"></div>
+        <div class="le"></div>
+        <div class="le"></div>
+        <div class="out"></div>
+        <div class="out"></div>
+        <div class="out"></div>
+
+        <div class="out"></div>
+        <div class="out"></div>
+        <div class="out"></div>
+        <div class="le"></div>
+        <div class="le"></div>
+        <div class="le"></div>
+        <div class="le"></div>
+        <div class="le"></div>
+        <div class="le"></div>
+        <div class="le"></div>
+        <div class="le"></div>
+        <div class="le"></div>
+        <div class="le"></div>
+        <div class="le"></div>
+        <div class="le"></div>
+        <div class="le"></div>
+        <div class="le"></div>
+        <div class="le"></div>
+        <div class="le"></div>
+        <div class="le"></div>
+        <div class="le"></div>
+        <div class="le"></div>
+        <div class="le"></div>
+        <div class="out"></div>
+        <div class="out"></div>
+        <div class="out"></div>
+
+        <div class="out"></div>
+        <div class="out"></div>
+        <div class="out"></div>
+        <div class="le"></div>
+        <div class="le"></div>
+        <div class="le"></div>
+        <div class="le"></div>
+        <div class="le"></div>
+        <div class="le"></div>
+        <div class="le"></div>
+        <div class="le"></div>
+        <div class="le"></div>
+        <div class="le"></div>
+        <div class="le"></div>
+        <div class="le"></div>
+        <div class="le"></div>
+        <div class="le"></div>
+        <div class="le"></div>
+        <div class="le"></div>
+        <div class="le"></div>
+        <div class="le"></div>
+        <div class="le"></div>
+        <div class="le"></div>
+        <div class="out"></div>
+        <div class="out"></div>
+        <div class="out"></div>
+        
+        <script>
+            var elem=document.getElementsByClassName("le");
+            var n = 0;
+            var b=document.getElementsByClassName("m");
+            var a = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
+            function mover(){
+                var a=19;
+                for(var i=0;i<9;i++){
+                    if(n===a)
+                    return;
+                    a+=20;
+                }
+                elem[n].innerHTML="";
+                n++;
+                elem[n].innerHTML="H";
+                check();
+                win();
+            }
+            function movel(){
+                var a=0;
+                for(var i=0;i<9;i++){
+                    if(n===a)
+                    return;
+                    a+=20;
+                }
+                elem[n].innerHTML="";
+                n--;
+                elem[n].innerHTML="H";
+                check();
+                win();
+            }
+            function moved(){
+                var a=160;
+                for(var i=0;i<20;i++){
+                    if(n===a)
+                    return;
+                    a++;
+                }
+                elem[n].innerHTML="";
+                n+=20;
+                elem[n].innerHTML="H";
+                check();
+                win();
+            }
+            function moveu(){
+                var a=0;
+                for(var i=0;i<20;i++){
+                    if(n===a)
+                    return;
+                    a++;
+                }
+                elem[n].innerHTML="";
+                n-=20;
+                elem[n].innerHTML="H";
+                check();
+                win();
+            }
+            function win(){
+                if(n===179){
+                    alert("You get to the exit!")
+                for(var i=0;i<4;i++)
+                    b[i].style.visibility="hidden";
+                b[4].style.visibility="visible";
+                }
+            }
+            function easy(){
+                for(var i=0;i<70;i++){
+                    var x=Math.floor(Math.random()*180)
+                    a[i]=x;
+                    if(x===0||x===1||x===20||x===179||x===178||x===159){
+                        i--;
+                        continue;
+                    }
+                    elem[x].style.background="red";
+                }
+            }
+            function check(){
+                for(var i=0;i<70;i++){
+                    if(n===a[i]){
+                        alert("You hit the block!");
+                        for(var i=0;i<4;i++)
+                            b[i].style.visibility="hidden";
+                        b[4].style.visibility="visible";
+                        break;
+                    } 
+                }
+            }
+        </script>
+    </body>
+</html>
